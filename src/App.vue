@@ -20,6 +20,7 @@
     <le-button type="primary" icon-position="right">搜索</le-button>
     <le-button type="primary" icon="sousuo"></le-button>
     <le-button type="primary" icon="sousuo" loading>加载</le-button>
+    <le-button type="primary" icon="sousuo" @click="btnClick">事件</le-button>
     <br>
     <le-button-group>
       <le-button icon="left">上一页</le-button>
@@ -30,6 +31,11 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    btnClick (event) {
+      // console.log(event)
+    }
+  }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button :class="btnClass" :disabled="loading">
+  <button :class="btnClass" :disabled="loading" @click="$emit('click', $event)">
     <le-icon class="icon" v-if="icon && !loading" :icon="icon"></le-icon>
     <le-icon class="icon" v-if="loading" icon="loading"></le-icon>
     <span class="button" v-if="$slots.default">
