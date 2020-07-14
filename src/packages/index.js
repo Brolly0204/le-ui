@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Button from '@/packages/button'
-import Icon from '@/packages/icon'
-import ButtonGroup from '@/packages/button-group'
+import Button from '@/packages/button/button'
+import Icon from '@/packages/button/icon'
+import ButtonGroup from '@/packages/button/button-group'
 
 function install (Vue) {
   Vue.component(Button.name, Button)
