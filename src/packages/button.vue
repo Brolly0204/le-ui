@@ -1,6 +1,7 @@
 <template>
-  <button :class="btnClass">
-    <le-icon class="icon" v-if="icon" :icon="icon"></le-icon>
+  <button :class="btnClass" :disabled="loading">
+    <le-icon class="icon" v-if="icon && !loading" :icon="icon"></le-icon>
+    <le-icon class="icon" v-if="loading" icon="loading"></le-icon>
     <span class="button" v-if="$slots.default">
       <slot></slot>
     </span>
@@ -41,6 +42,10 @@ export default {
         }
         return true
       }
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -76,13 +81,20 @@ $active-color: #3a8ee6;
   justify-content: center;
   vertical-align: middle;
   user-select: none;
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .6;
+  }
+
   &:hover {
     border-color: $border-color;
     background-color: $background;
   }
   &:focus, &:active {
     color: $active-color;
-    border-color: 1px solid $active-color;
+    border: 1px solid $active-color;
     background-color: $background;
     outline: none;
   }

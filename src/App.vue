@@ -19,6 +19,12 @@
     <le-button type="primary" icon="sousuo" icon-position="right">搜索</le-button>
     <le-button type="primary" icon-position="right">搜索</le-button>
     <le-button type="primary" icon="sousuo"></le-button>
+    <le-button type="primary" icon="sousuo" loading>加载</le-button>
+    <br>
+    <le-button-group>
+      <le-button icon="left">上一页</le-button>
+      <le-button icon="right" iconPosition="right">上一页</le-button>
+    </le-button-group>
   </div>
 </template>
 
